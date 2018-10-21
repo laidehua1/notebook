@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FC0EA18-4965-4EC7-A4B0-433E96CB7997}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>notebook</RootNamespace>
+    <AssemblyName>notebook</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassFactory.cs" />
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="GeneralLogic.cs" />
+    <Compile Include="GlobalParam.cs" />
+    <Compile Include="IGeneralLogic.cs" />
+    <Compile Include="MusicPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusicPlayer.Designer.cs">
+      <DependentUpon>MusicPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenFile.Designer.cs">
+      <DependentUpon>OpenFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForBinary.cs" />
+    <Compile Include="WriteNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WriteNote.Designer.cs">
+      <DependentUpon>WriteNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool.Designer.cs">
+      <DependentUpon>Tool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsAPI.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusicPlayer.resx">
+      <DependentUpon>MusicPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenFile.resx">
+      <DependentUpon>OpenFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WriteNote.resx">
+      <DependentUpon>WriteNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool.resx">
+      <DependentUpon>Tool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05f7f7eceea144376b64b431d59d034e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_book.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\眼睛.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\眼睛_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\眼睛_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P_eye_enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\书页_光影2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\书页_光影2_边角.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\书页_光影2_副本.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b43bc175f181a5cd2e8e137c7243a331.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P_GreenReally.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\居中对齐.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\数字编号.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\项目编号.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\右对齐.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左对齐.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P_openFile.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P_saveFail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P_UserIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\播放按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\播放按钮变.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止按钮变.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\文件夹打开.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\音量按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\音量按钮变色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\暂停按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\暂停按钮变.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
